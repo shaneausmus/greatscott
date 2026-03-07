@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<section class="intro">
+  <p class="intro-eyebrow">Data &middot; Software &middot; Math</p>
+  <h1>Shane<br><em>Ausmus.</em></h1>
+  <p>
+    Data strategy and GTM engineer at Verkada. Former McKinsey analyst.
+    Vanderbilt economics &amp; CS. I write about software, math, and whatever
+    else I'm working through.
+  </p>
+</section>
+
+<section class="home-section">
+  <p class="label">Recent Posts</p>
+  <ul class="post-list">
+    {% for post in collections.posts | head(5) %}
+    <li class="post-row">
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+      <div class="post-row-right">
+        {% if post.data.category %}<span class="tag">{{ post.data.category }}</span>{% endif %}
+        <span class="date">{{ post.date | shortDate }}</span>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

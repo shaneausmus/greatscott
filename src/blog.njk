@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+title: Blog
+permalink: /blog/
+---
+<section class="blog-header">
+  <h1>Blog</h1>
+  <p>Writing on software, math, and whatever else I'm thinking about.</p>
+</section>
+
+<ul class="post-list">
+  {% for post in collections.posts %}
+  <li class="post-row">
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <div class="post-row-right">
+      {% if post.data.category %}<span class="tag">{{ post.data.category }}</span>{% endif %}
+      <span class="date">{{ post.date | shortDate }}</span>
+    </div>
+  </li>
+  {% endfor %}
+</ul>

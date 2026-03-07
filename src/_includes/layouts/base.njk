@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title and title != "Home" %}{{ title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  {% if math %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  {% endif %}
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ '/' | url }}" class="brand">Shane Ausmus</a>
+      <ul>
+        <li><a href="{{ '/about/' | url }}"{% if page.url == '/greatscott/about/' %} class="active"{% endif %}>about</a></li>
+        <li><a href="{{ '/resume/' | url }}"{% if page.url == '/greatscott/resume/' %} class="active"{% endif %}>resume</a></li>
+        <li><a href="{{ '/projects/' | url }}"{% if page.url == '/greatscott/projects/' %} class="active"{% endif %}>projects</a></li>
+        <li><a href="{{ '/blog/' | url }}"{% if '/blog' in page.url %} class="active"{% endif %}>blog</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    {{ content | safe }}
+  </main>
+
+  <footer>
+    <div class="inner">
+      <span>© {{ site.year }} Shane Ausmus</span>
+      <span>
+        <a href="https://github.com/shaneausmus" target="_blank" rel="noopener">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/shane-ausmus/" target="_blank" rel="noopener">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+
+  {% if math %}
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false}
+      ]
+    });"></script>
+  {% endif %}
+</body>
+</html>
