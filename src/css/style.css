@@ -185,6 +185,8 @@ body {
 .site-content {
   margin-left: var(--sidebar-w);
   flex: 1;
+  min-width: 0;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
