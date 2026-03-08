@@ -19,7 +19,7 @@
 /* ─── Reset ───────────────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
 
 body {
   font-family: var(--font);
@@ -33,6 +33,7 @@ body {
   background-size: 100% 100%, 28px 28px;
   background-attachment: fixed;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* ─── Site wrapper ────────────────────────────────────────────────────────── */
