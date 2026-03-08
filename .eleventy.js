@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "images": "images" });
   eleventyConfig.addPassthroughCopy({ "Docs": "Docs" });
+  eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
 
   // Collections
   eleventyConfig.addCollection("posts", (api) =>
@@ -34,7 +35,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("head", (arr, n) => (arr || []).slice(0, n));
 
   return {
-    pathPrefix: "/greatscott/",
+    pathPrefix: "/",
     dir: {
       input: "src",
       output: "_site",

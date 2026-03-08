@@ -18,9 +18,9 @@
     <nav>
       <a href="{{ '/' | url }}" class="brand">Shane Ausmus</a>
       <ul>
-        <li><a href="{{ '/about/' | url }}"{% if page.url == '/greatscott/about/' %} class="active"{% endif %}>about</a></li>
-        <li><a href="{{ '/resume/' | url }}"{% if page.url == '/greatscott/resume/' %} class="active"{% endif %}>resume</a></li>
-        <li><a href="{{ '/projects/' | url }}"{% if page.url == '/greatscott/projects/' %} class="active"{% endif %}>projects</a></li>
+        <li><a href="{{ '/about/' | url }}"{% if page.url == '/about/' %} class="active"{% endif %}>about</a></li>
+        <li><a href="{{ '/resume/' | url }}"{% if page.url == '/resume/' %} class="active"{% endif %}>resume</a></li>
+        <li><a href="{{ '/projects/' | url }}"{% if page.url == '/projects/' %} class="active"{% endif %}>projects</a></li>
         <li><a href="{{ '/blog/' | url }}"{% if '/blog' in page.url %} class="active"{% endif %}>blog</a></li>
       </ul>
     </nav>
