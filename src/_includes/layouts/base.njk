@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="dark">
   <title>{% if title and title != "Home" %}{{ title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ description or site.description }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,31 +15,78 @@
   {% endif %}
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="{{ '/' | url }}" class="brand">Shane Ausmus</a>
-      <ul>
-        <li><a href="{{ '/about/' | url }}"{% if page.url == '/about/' %} class="active"{% endif %}>about</a></li>
-        <li><a href="{{ '/resume/' | url }}"{% if page.url == '/resume/' %} class="active"{% endif %}>resume</a></li>
-        <li><a href="{{ '/projects/' | url }}"{% if page.url == '/projects/' %} class="active"{% endif %}>projects</a></li>
-        <li><a href="{{ '/blog/' | url }}"{% if '/blog' in page.url %} class="active"{% endif %}>blog</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="site-wrapper">
 
-  <main>
-    {{ content | safe }}
-  </main>
+    <aside class="sidebar">
+      <div class="sidebar-top">
+        <a href="{{ '/' | url }}" class="brand">
+          <span class="brand-first">Shane</span>
+          <span class="brand-last">Ausmus</span>
+        </a>
+      </div>
 
-  <footer>
-    <div class="inner">
-      <span>© {{ site.year }} Shane Ausmus</span>
-      <span>
-        <a href="https://github.com/shaneausmus" target="_blank" rel="noopener">GitHub</a> ·
+      <nav class="sidebar-nav">
+        <ul>
+          <li><a href="{{ '/about/' | url }}"{% if page.url == '/about/' %} class="active"{% endif %}><span class="nav-dash"></span>about</a></li>
+          <li><a href="{{ '/resume/' | url }}"{% if page.url == '/resume/' %} class="active"{% endif %}><span class="nav-dash"></span>resume</a></li>
+          <li><a href="{{ '/projects/' | url }}"{% if page.url == '/projects/' %} class="active"{% endif %}><span class="nav-dash"></span>projects</a></li>
+          <li><a href="{{ '/blog/' | url }}"{% if '/blog' in page.url %} class="active"{% endif %}><span class="nav-dash"></span>blog</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="https://github.com/shaneausmus" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/shane-ausmus/" target="_blank" rel="noopener">LinkedIn</a>
-      </span>
+        <span>© {{ site.year }}</span>
+      </div>
+    </aside>
+
+    <div class="site-content">
+      <main>
+        {{ content | safe }}
+      </main>
+
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span class="ticker-item">Data Strategy</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Software Engineering</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Vanderbilt Economics &amp; CS</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">McKinsey &amp; Company</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Verkada</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Project Euler Top 2%</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Combinatorics</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Systems Programming</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Language Interpreters</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">GTM Engineering</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Data Infrastructure</span><span class="ticker-dot">·</span>
+          <!-- duplicate for seamless loop -->
+          <span class="ticker-item">Data Strategy</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Software Engineering</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Vanderbilt Economics &amp; CS</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">McKinsey &amp; Company</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Verkada</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Project Euler Top 2%</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Combinatorics</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Systems Programming</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Language Interpreters</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">GTM Engineering</span><span class="ticker-dot">·</span>
+          <span class="ticker-item">Data Infrastructure</span><span class="ticker-dot">·</span>
+        </div>
+      </div>
+
+      <footer>
+        <div class="inner">
+          <span>© {{ site.year }} Shane Ausmus. All rights reserved.</span>
+          <span>
+            <a href="https://github.com/shaneausmus" target="_blank" rel="noopener">GitHub</a>
+            <span class="sep">·</span>
+            <a href="https://www.linkedin.com/in/shane-ausmus/" target="_blank" rel="noopener">LinkedIn</a>
+          </span>
+        </div>
+      </footer>
     </div>
-  </footer>
+
+  </div>
 
   <script>
     document.addEventListener('mousemove', function(e) {
