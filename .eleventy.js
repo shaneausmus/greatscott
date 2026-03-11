@@ -6,8 +6,9 @@ module.exports = function (eleventyConfig) {
   // Pass-throughs (paths relative to project root)
   eleventyConfig.addPassthroughCopy({ "src/css": "css" });
   eleventyConfig.addPassthroughCopy({ "images": "images" });
+  eleventyConfig.addPassthroughCopy({ "src/images": "images" });
   eleventyConfig.addPassthroughCopy({ "Docs": "Docs" });
-  eleventyConfig.addPassthroughCopy({ "CNAME": "CNAME" });
+  eleventyConfig.addPassthroughCopy({ "CNAME.txt": "CNAME" });
 
   // Collections
   eleventyConfig.addCollection("posts", (api) =>
