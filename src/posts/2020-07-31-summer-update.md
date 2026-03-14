@@ -17,17 +17,13 @@ Books I got to read this summer:
 
 - *American Psycho* — Bret Easton Ellis
 - *Anna Karenina* — Leo Tolstoy
-- *Have Black Lives Ever Mattered?* — Mumia Abu Jamal
-- *The Autobiography of Malcolm X* — Malcolm X / Alex Haley
-- *Are Prisons Obsolete?* — Angela Y. Davis
 - *The Plague* — Albert Camus
 - *The Handmaid's Tale* — Margaret Atwood
 - *Case Interview Secrets* — Victor Cheng
 - *The Awakening* — Kate Chopin
 - *Things Fall Apart* — Chinua Achebe
-- *The Working Poor* — David K. Shipler
 
-These books helped reinforce my passion for social justice, literature, and professional development, while giving me some R&R outside of my personal endeavors.
+These books helped reinforce my passion for literature and offered me some R&R outside of my personal endeavors.
 
 ## Campus Involvement
 
