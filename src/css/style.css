@@ -777,8 +777,8 @@ code { font-family: var(--mono); font-size: 0.875em; }
     width: 100%;
     height: auto;
     flex-direction: row;
-    align-items: center;
-    padding: 14px 20px;
+    align-items: stretch;
+    padding: 0 20px;
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
@@ -789,7 +789,7 @@ code { font-family: var(--mono); font-size: 0.875em; }
     right: 0;
   }
 
-  .sidebar-top { margin-bottom: 0; margin-right: auto; }
+  .sidebar-top { margin-bottom: 0; margin-right: auto; display: flex; align-items: center; padding: 14px 0; }
 
   .brand { display: flex; align-items: center; gap: 6px; }
   .brand-first { display: inline; font-size: 1rem; margin-bottom: 0; }
