@@ -791,9 +791,9 @@ code { font-family: var(--mono); font-size: 0.875em; }
 
   .sidebar-top { margin-bottom: 0; margin-right: auto; }
 
-  .brand { display: flex; align-items: baseline; gap: 6px; }
-  .brand-first { display: inline; font-size: 0.58rem; margin-bottom: 0; }
-  .brand-last  { display: inline; font-size: 1rem; }
+  .brand { display: flex; align-items: center; gap: 6px; }
+  .brand-first { display: inline; font-size: 0.8rem; margin-bottom: 0; }
+  .brand-last  { display: inline; font-size: 1.1rem; }
 
   .sidebar-nav { flex: 0; }
 
@@ -833,7 +833,6 @@ code { font-family: var(--mono); font-size: 0.875em; }
 
 @media (max-width: 480px) {
   .sidebar-nav ul { gap: 14px; }
-  .brand-first { display: none; }
   .post-row { flex-wrap: wrap; gap: 6px; }
   .resume-entry-header { flex-direction: column; gap: 2px; }
   footer .inner { flex-direction: column; gap: 6px; text-align: center; }
